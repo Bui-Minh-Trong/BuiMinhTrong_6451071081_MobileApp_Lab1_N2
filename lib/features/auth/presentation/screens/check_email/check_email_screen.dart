@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../common/styles/app_colors.dart';
-import '../../common/styles/app_text_styles.dart';
-import '../../common/widgets/custom_button.dart';
-import '../../utils/app_assets.dart';
+import '../../../../../common/styles/app_colors.dart';
+import '../../../../../common/styles/app_text_styles.dart';
+import '../../../../../common/widgets/custom_button.dart';
+import '../../../../../utils/app_assets.dart';
 
 class CheckEmailScreen extends StatelessWidget {
   const CheckEmailScreen({super.key});
@@ -20,7 +20,7 @@ class CheckEmailScreen extends StatelessWidget {
             children: [
               const SizedBox(height: 32),
 
-              // ─── Hình minh hoạ ──────────────────────────
+              // Hình minh hoạ
               Center(
                 child: SvgPicture.asset(
                   AppAssets.illCheckEmail,
@@ -29,7 +29,7 @@ class CheckEmailScreen extends StatelessWidget {
               ),
               const SizedBox(height: 32),
 
-              // ─── Tiêu đề ────────────────────────────────
+              // Tiêu đề
               Text('Check Your Email', style: AppTextStyles.heading),
               const SizedBox(height: 12),
               RichText(
@@ -51,7 +51,7 @@ class CheckEmailScreen extends StatelessWidget {
               ),
               const SizedBox(height: 36),
 
-              // ─── Nút mở ứng dụng email ──────────────────────
+              // Nút mở ứng dụng email
               PrimaryButton(
                 label: 'OPEN YOUR EMAIL',
                 onPressed: () =>
@@ -59,7 +59,7 @@ class CheckEmailScreen extends StatelessWidget {
               ),
               const SizedBox(height: 16),
 
-              // ─── Nút về trang chủ (ghost) ─────────────────
+              // Nút quay lại đăng nhập
               OutlinedActionButton(
                 label: 'BACK TO HOME',
                 onPressed: () => Navigator.pushNamedAndRemoveUntil(
@@ -70,7 +70,7 @@ class CheckEmailScreen extends StatelessWidget {
               ),
               const SizedBox(height: 28),
 
-              // ─── Link gửi lại email ──────────────────────
+              // Link gửi lại email
               Center(
                 child: RichText(
                   text: TextSpan(

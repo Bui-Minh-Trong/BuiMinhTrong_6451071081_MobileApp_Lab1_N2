@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../common/styles/app_colors.dart';
-import '../../utils/app_assets.dart';
+import '../../../../../common/styles/app_colors.dart';
+import '../../../../../utils/app_assets.dart';
 
-/// Màn hình Logo ban đầu — nền navy, tự động chuyển sang Splash sau 2.5 giây
+/// Màn hình Logo hiển thị lúc khởi động app
 class LogoScreen extends StatefulWidget {
   const LogoScreen({super.key});
 
@@ -15,7 +15,7 @@ class _LogoScreenState extends State<LogoScreen> {
   @override
   void initState() {
     super.initState();
-    // Đợi frame đầu tiên render xong, rồi mới bắt đầu đếm giờ
+    // Chuyển sang màn hình Splash sau 2 giây
     WidgetsBinding.instance.addPostFrameCallback((_) {
       Future.delayed(const Duration(seconds: 2), () {
         if (mounted) {
@@ -33,7 +33,7 @@ class _LogoScreenState extends State<LogoScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // ─── Logo icon trong rounded box ──────────────
+            // Icon Logo
             Container(
               width: 100,
               height: 100,
@@ -52,7 +52,7 @@ class _LogoScreenState extends State<LogoScreen> {
             ),
             const SizedBox(height: 20),
 
-            // ─── Brand name ───────────────────────────────
+            // Tên thương hiệu
             const Text(
               'Jobspot',
               style: TextStyle(

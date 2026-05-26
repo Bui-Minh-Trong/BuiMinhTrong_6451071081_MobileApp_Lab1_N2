@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import '../screens/check_email/check_email_screen.dart';
-import '../screens/forgot_password/forgot_password_screen.dart';
-import '../screens/logo/logo_screen.dart';
-import '../screens/login/login_screen.dart';
-import '../screens/signup/signup_screen.dart';
-import '../screens/splash/splash_screen.dart';
-import '../screens/successfully/successfully_screen.dart';
+import '../features/auth/presentation/screens/check_email/check_email_screen.dart';
+import '../features/auth/presentation/screens/forgot_password/forgot_password_screen.dart';
+import '../features/auth/presentation/screens/logo/logo_screen.dart';
+import '../features/auth/presentation/screens/login/login_screen.dart';
+import '../features/auth/presentation/screens/signup/signup_screen.dart';
+import '../features/auth/presentation/screens/splash/splash_screen.dart';
+import '../features/auth/presentation/screens/successfully/successfully_screen.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => const LogoScreen(),       // ← Navy logo screen
-        '/splash': (context) => const SplashScreen(), // ← White splash screen
+        '/': (context) => const LogoScreen(),       // Màn hình Logo
+        '/splash': (context) => const SplashScreen(), // Màn hình Splash
         '/login': (context) => const LoginScreen(),
         '/signup': (context) => const SignupScreen(),
         '/forgot-password': (context) => const ForgotPasswordScreen(),

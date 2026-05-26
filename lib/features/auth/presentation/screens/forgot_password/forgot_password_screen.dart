@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../common/styles/app_colors.dart';
-import '../../common/styles/app_text_styles.dart';
-import '../../common/widgets/custom_button.dart';
-import '../../common/widgets/custom_text_field.dart';
-import '../../utils/app_assets.dart';
+import '../../../../../common/styles/app_colors.dart';
+import '../../../../../common/styles/app_text_styles.dart';
+import '../../../../../common/widgets/custom_button.dart';
+import '../../../../../common/widgets/custom_text_field.dart';
+import '../../../../../utils/app_assets.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({super.key});
@@ -34,7 +34,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
             children: [
               const SizedBox(height: 32),
 
-              // ─── Hình minh hoạ ────────────────────────────
+              // Hình minh hoạ
               Center(
                 child: SvgPicture.asset(
                   AppAssets.illForgotPassword,
@@ -43,7 +43,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               ),
               const SizedBox(height: 32),
 
-              // ─── Tiêu đề ──────────────────────────────────
+              // Tiêu đề
               Text('Forgot Password?', style: AppTextStyles.heading),
               const SizedBox(height: 12),
               Text(
@@ -52,7 +52,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               ),
               const SizedBox(height: 32),
 
-              // ─── Ô nhập email ──────────────────────────────
+              // Ô nhập email
               CustomTextField(
                 label: 'Email',
                 hintText: 'brandone@example.com',
@@ -61,7 +61,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               ),
               const SizedBox(height: 32),
 
-              // ─── Nút gửi yêu cầu đặt lại mật khẩu ────────
+              // Nút gửi đặt lại mật khẩu
               PrimaryButton(
                 label: 'RESET PASSWORD',
                 onPressed: () =>
@@ -69,7 +69,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               ),
               const SizedBox(height: 24),
 
-              // ─── Quay lại màn hình đăng nhập ──────────────
+              // Quay lại màn hình đăng nhập
               Center(
                 child: GestureDetector(
                   onTap: () => Navigator.popUntil(

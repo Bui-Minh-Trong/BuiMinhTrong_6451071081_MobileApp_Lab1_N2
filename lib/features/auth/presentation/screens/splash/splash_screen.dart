@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../common/styles/app_colors.dart';
-import '../../common/styles/app_text_styles.dart';
-import '../../utils/app_assets.dart';
+import '../../../../../common/styles/app_colors.dart';
+import '../../../../../common/styles/app_text_styles.dart';
+import '../../../../../utils/app_assets.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -19,7 +19,7 @@ class SplashScreen extends StatelessWidget {
             children: [
               const SizedBox(height: 16),
 
-              // ─── Tên thương hiệu góc phải trên ─────────────
+              // Tên thương hiệu góc trên bên phải
               Align(
                 alignment: Alignment.topRight,
                 child: Text(
@@ -32,7 +32,7 @@ class SplashScreen extends StatelessWidget {
                 ),
               ),
 
-              // ─── Hình minh hoạ — chiếm phần lớn giữa màn hình
+              // Hình minh hoạ chính giữa
               Expanded(
                 child: Center(
                   child: SvgPicture.asset(
@@ -41,7 +41,7 @@ class SplashScreen extends StatelessWidget {
                 ),
               ),
 
-              // ─── Tagline: "Find Your Dream Job Here!" ─────
+              // Slogan
               RichText(
                 text: const TextSpan(
                   children: [
@@ -77,14 +77,14 @@ class SplashScreen extends StatelessWidget {
               ),
               const SizedBox(height: 14),
 
-              // ─── Mô tả ngắn ───────────────────────────────
+              // Mô tả ngắn
               Text(
                 'Explore all the most exciting job roles based on your interest and study major.',
                 style: AppTextStyles.splashBody,
               ),
               const SizedBox(height: 40),
 
-              // ─── Nút mũi tên cam — góc phải dưới ─────────
+              // Nút tiếp tục sang màn đăng nhập
               Align(
                 alignment: Alignment.centerRight,
                 child: GestureDetector(
